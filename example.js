@@ -35,6 +35,11 @@ BOOMR.plugins.NodeCounter = {
 
 		BOOMR.utils.pluginConfig(impl, config, "NodeCounter", properties);
 
+		// Let's call our method after the page has finished loading
+		// the subscribe method takes 4 arguments:
+		//	event name, callback function, callback data, callback scope
+		BOOMR.subscribe("page_ready", impl.run, null, impl);
+
 		return this;
 	},
 
