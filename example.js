@@ -1,6 +1,4 @@
-(function(w) {
-
-var d=w.document;
+(function() {
 
 BOOMR = BOOMR || {};
 BOOMR.plugins = BOOMR.plugins || {};
@@ -12,6 +10,9 @@ var impl = {
 	// implement a method to do the actual work
 	run: function()
 	{
+		// Use the actual host document rather than the context we may be under
+		var d = BOOMR.window.document;
+
 		// for this example, we'll ignore browsers that do not support
 		// Array.forEach
 
@@ -48,5 +49,5 @@ BOOMR.plugins.NodeCounter = {
 	}
 };
 
-}(window));
+}());
 
