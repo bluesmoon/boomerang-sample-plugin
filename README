@@ -1,0 +1,11 @@
+Check out each branch in order to see the steps:
+
+git checkout step-1
+git checkout step-2
+etc.
+
+git log inside a branch shows you what we did
+
+index.html shows it to you in action.
+
+get other plugins from https://github.com/bluesmoon/boomerang
