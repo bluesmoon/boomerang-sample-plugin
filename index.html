@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<script src="boomerang.js"></script>
+<script src="example.js"></script>
+<script>
+BOOMR.subscribe('before_beacon', function(o) {
+	var r = document.getElementById('results');
+
+	for(var k in o) {
+		var t = document.createTextNode(k + " = " + o[k]);
+		r.appendChild(t);
+		r.innerHTML += "<br>";
+	}
+
+});
+
+BOOMR.init({
+	NodeCounter: {
+		node_names: ["script", "body", "pre"]
+	}
+});
+</script>
+</head>
+<body>
+<pre id="instructions">
+Check out each branch in order to see the steps:
+
+git checkout step-1
+git checkout step-2
+etc.
+
+git log inside a branch shows you what we did
+
+merge a branch into master to see it in action
+(you will only see something happen after step-5)
+</pre>
+<pre id="results">
+</pre>
+</body>
+</html>
