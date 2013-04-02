@@ -18,6 +18,12 @@ var impl = {
 		this.node_names.forEach(function(node_name) {
 			BOOMR.addVar(this.prefix + node_name, d.getElementsByTagName(node_name).length);
 		});
+
+		// Set the plugin's completed state...
+		this.complete = true;
+
+		// And tell boomerang that we're ready to send the beacon if everyone else is...
+		BOOMR.sendBeacon();
 	},
 
 	complete: false
