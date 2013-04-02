@@ -18,7 +18,7 @@ var impl = {
 
 		this.node_names.forEach(function(node_name) {
 			BOOMR.addVar(this.prefix + node_name, d.getElementsByTagName(node_name).length);
-		});
+		}, this);
 
 		// Set the plugin's completed state...
 		this.complete = true;
